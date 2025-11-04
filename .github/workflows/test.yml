@@ -1,0 +1,20 @@
+name: Test Workflow
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: write
+  actions: write
+  packages: write
+
+jobs:
+  build:
+    uses: tehw0lf/workflows/.github/workflows/build-test-publish.yml@main
+    secrets: inherit
+    with:
+      event_name: ${{ github.event_name }}
+      tool: npm
+      artifact_path: dist

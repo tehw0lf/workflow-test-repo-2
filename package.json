@@ -1,0 +1,10 @@
+{
+  "name": "workflow-test-repo",
+  "version": "1.0.0",
+  "description": "Test repository for workflow validation",
+  "scripts": {
+    "test": "echo \"Running tests...\" && exit 0",
+    "build": "echo \"Building...\" && mkdir -p dist && echo 'test' > dist/index.js",
+    "lint": "echo \"Linting...\" && exit 0"
+  }
+}
